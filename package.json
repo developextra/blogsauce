@@ -1,12 +1,24 @@
 {
-  "name": "@toolio/blogsauce",
+  "name": "blogsauce",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Personal blog building tool.",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "blogsauce",
+    "markdown",
+    "personal",
+    "blog"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developextra/blogsauce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/developextra/blogsauce/issues"
+  },
+  "homepage": "https://github.com/developextra/blogsauce#readme"
 }
