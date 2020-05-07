@@ -1,6 +1,6 @@
 {
   "name": "blogsauce",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Personal blog building tool.",
   "main": "src/index.js",
   "scripts": {
@@ -27,13 +27,5 @@
   },
   "bin": {
     "blogsauce": "bin/blogsauce.js"
-  },
-  "blogsauceConfig": {
-    "entry": "posts",
-    "output": "__MAIN__",
-    "snippets": "posts/snippets",
-    "publish": [
-      "Article Blah"
-    ]
   }
 }
