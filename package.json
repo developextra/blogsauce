@@ -21,7 +21,18 @@
     "url": "https://github.com/developextra/blogsauce/issues"
   },
   "homepage": "https://github.com/developextra/blogsauce#readme",
-  "devDependencies": {
+  "dependencies": {
     "@toolio/markdown": "^0.1.3"
+  },
+  "bin": {
+    "blogsauce": "bin/blogsauce.js"
+  },
+  "blogsauceConfig": {
+    "entry": "posts",
+    "output": "__MAIN__",
+    "snippets": "posts/snippets",
+    "publish": [
+      "Article Blah"
+    ]
   }
 }

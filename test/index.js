@@ -1,3 +1,11 @@
 const blog = require('../src')
 
-console.log(blog())
+blog.setConfig({
+    entry: 'posts',
+    output: '.',
+    format: 'html'
+})
+
+blog.init()
+
+// console.log(blog)
