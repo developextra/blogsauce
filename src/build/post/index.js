@@ -25,7 +25,7 @@ module.exports = function(option, snippets) {
         snippets.forEach(function(snippet) {
             snippetName = snippet.split(marker)[snippet.split(marker).length - 1]
             if(path.parse(postName).name === path.parse(snippetName).name) {
-                resolved = { post: post, snippet: snippet }
+                resolved = { postPath: post, snippetPath: snippet }
                 posts.push(resolved)
             }
         })

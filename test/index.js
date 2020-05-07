@@ -2,8 +2,10 @@ const blog = require('../src')
 
 
 blog.setConfig({
+    format: 'all',
     snippet: {
-        use: ['Hello World']
+        use: true,
+        format: 'all'
     }
 })
 
