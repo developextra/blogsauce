@@ -1,11 +1,15 @@
 const blog = require('../src')
 
+
 blog.setConfig({
-    entry: 'posts',
-    output: '.',
-    format: 'html'
+    snippet: {
+        use: ['Hello World']
+    }
 })
 
-blog.init()
+blog.build()
 
-// console.log(blog)
+
+// blog.init()
+// blog.config.snippets.setConfig({test: true})
+// console.log(blog.config.snippets)

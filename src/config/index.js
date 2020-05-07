@@ -3,5 +3,23 @@ module.exports = {
     output: '.',
     format: 'md',
     owner: 'Michael Arakilian',
-    snippets: require('./snippets')
+    snippet: {
+        use: true,
+        entry: 'posts/snippets',
+        format: 'js',
+        defaultSeo: false,
+        options: {
+            title: '',
+            description: '',
+            tags: [],
+            readtime: null,
+            features: [],
+            seo: {
+                author: '',
+                title: '',
+                description: '',
+                keywords: []
+            }
+        }
+    }
 }
