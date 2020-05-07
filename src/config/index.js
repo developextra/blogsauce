@@ -2,8 +2,9 @@ module.exports = {
     entry: 'posts',
     output: {
         path: '.',
-        sanitize: false
+        sanitize: true
     },
+    logErrors: false,
     format: 'all',
     owner: 'Michael Arakilian',
     markdown: {},
