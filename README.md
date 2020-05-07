@@ -12,25 +12,6 @@ personal blog `Develop Extra`. Once it's at a "stable" stage
 I'll begin to use it for [developextra.com](https://github.com/developextra/developextra.com)
 to host my blog posts using Netlify.
 
-## Install
-```
-npm install blogsauce --save-dev
-```
-
-## Usage
-```js
-const blog = require('blogsauce')
-
-console.log(blog.config)
-
-blog.setConfig({ options })
-blog.build()
-```
-
-## Documentation
-
-Coming soon...
-
 ## License
 
 MIT License
