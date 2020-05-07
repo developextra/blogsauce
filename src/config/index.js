@@ -1,18 +1,18 @@
 module.exports = {
     entry: 'posts',
     output: '.',
-    format: 'md',
+    format: 'all',
     owner: 'Michael Arakilian',
     snippet: {
         use: true,
         entry: 'posts/snippets',
         format: 'js',
-        defaultSeo: false,
+        defaultSeo: true,
         options: {
             title: '',
             description: '',
             tags: [],
-            readtime: null,
+            readtime: '',
             features: [],
             seo: {
                 author: '',
