@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/developextra/blogsauce#readme",
   "dependencies": {
-    "@toolio/markdown": "^0.1.3"
+    "@toolio/markdown": "^0.1.3",
+    "js-yaml": "^3.13.1"
   },
   "bin": {
     "blogsauce": "bin/blogsauce.js"
