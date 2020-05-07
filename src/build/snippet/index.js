@@ -10,18 +10,24 @@ module.exports = function(option) {
     
     switch(typeOf(option.use)) {
         case 'boolean':
-            if(option.use === true) fill(option.entry, snippets)
+            let resolvedAll = []
+            if(option.use === true) {
+                walk(option.entry, function(snippetPath) {
+                    if(snippetPath.endsWith(option.format)) resolvedAll.push(snippetPath)
+                })
+            }
+            snippets = resolvedAll
             break
         case 'array':
-            let resolved = []
+            let resolvedSpecific = []
             fill(option.entry, snippets)
             snippets.forEach(snippetPath => {
                 option.use.forEach(snippet => {
                     let snippetName = snippetPath.split(marker)[snippetPath.split(marker).length - 1].split(`.${option.format}`)
-                    if(snippetName.length > 1 && snippet === snippetName[0]) resolved.push(snippetPath)
+                    if(snippetName.length > 1 && snippet === snippetName[0]) resolvedSpecific.push(snippetPath)
                 })
             })
-            snippets = resolved
+            snippets = resolvedSpecific
             break
     }
 
