@@ -1,8 +1,13 @@
 module.exports = {
     entry: 'posts',
-    output: '.',
+    output: {
+        path: '.',
+        sanitize: false
+    },
     format: 'all',
     owner: 'Michael Arakilian',
+    markdown: {},
+    sanitizeHtml: {},
     snippet: {
         use: true,
         entry: 'posts/snippets',
