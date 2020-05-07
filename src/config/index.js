@@ -6,7 +6,7 @@ module.exports = {
     snippet: {
         use: true,
         entry: 'posts/snippets',
-        format: 'js',
+        format: 'all',
         defaultSeo: true,
         options: {
             title: '',
