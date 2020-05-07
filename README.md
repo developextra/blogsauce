@@ -3,6 +3,7 @@
 **Personal blog building tool.**
 
 [![CircleCI](https://circleci.com/gh/developextra/blogsauce.svg?style=shield)](https://circleci.com/gh/developextra/blogsauce)
+[![npm version](https://img.shields.io/npm/v/blogsauce.svg?style=flat)](https://www.npmjs.com/package/blogsauce) 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/developextra/blogsauce/blob/master/LICENSE.md)
 
 I'm currently working on this tool to use for my
