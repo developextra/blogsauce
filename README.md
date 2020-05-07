@@ -2,6 +2,9 @@
 
 **Personal blog building tool.**
 
+[![CircleCI](https://circleci.com/gh/developextra/blogsauce.svg?style=shield)](https://circleci.com/gh/developextra/blogsauce)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/developextra/blogsauce/blob/master/LICENSE.md)
+
 I'm currently working on this tool to use for my
 personal blog `Develop Extra`. Once it's at a "stable" stage 
 I'll begin to use it for [developextra.com](https://github.com/developextra/developextra.com)
