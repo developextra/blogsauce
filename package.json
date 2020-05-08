@@ -28,6 +28,7 @@
     "js-yaml": "^3.13.1"
   },
   "bin": {
-    "blogsauce": "bin/blogsauce.js"
+    "blogsauce": "bin/blogsauce.js",
+    "bls": "bin/blogsauce.js"
   }
 }
