@@ -25,4 +25,11 @@
             - `message`
     - `message`
         - An unordered list of runtime error messages. The object keys are used
-        as an "index".
+        as an "index". I wouldn't recommend modifying current message keys. Feel
+        free to change the value though that's totally expected. What I do
+        recommend is adding new keys if you want to handle new error cases.
+        The only reason I say that is because the 
+        program is expecting the error messages that exist in the default config. 
+        So if you change the error message you would have to change all the cases
+        where it's used. That means modifying the source code. If your going to 
+        do that might as well fork it, and help a brother out :heart:
