@@ -43,6 +43,7 @@ module.exports.config = {
     title: require(path.resolve('package.json')).name,
     description: require(path.resolve('package.json')).description,
     version: require(path.resolve('package.json')).version,
+    keywords: require(path.resolve('package.json')).keywords,
     author: {
         name: require(path.resolve('package.json')).author,
         bio: '',
