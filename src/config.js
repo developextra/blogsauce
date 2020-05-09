@@ -59,6 +59,5 @@ module.exports.config = {
 // setConfig()
 module.exports.set = function(options) {
     if(!options) this.error('Valid Options Required::setConfig')
-    console.log('some more')
-    // else this.config = require('../lib/Merge')(this.config, options)
+    else this.config = require('../lib/Merge')(this.config, options)
 }
