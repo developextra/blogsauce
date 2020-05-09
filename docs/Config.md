@@ -13,7 +13,7 @@
         - `color`
             - Apply color the error message. Expects either a valid color, or false.
             If false, no colors get applied. If `all` is false, apply colors by section
-            - Valid Colors: [black](/), [red](/), [green](/), [yellow](/), [blue](/), [magenta](/), [cyan](/), [white](/), [gray](/)
+            - Valid Colors: [black](#), [red](#), [green](#), [yellow](#), [blue](#), [magenta](#), [cyan](#), [white](#), [gray](#)
             - `all`
             - `prefix`
             - `message`
