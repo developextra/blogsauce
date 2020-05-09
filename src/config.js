@@ -79,8 +79,8 @@ module.exports.config = {
         message: {
             'Valid Message Required::error': 'error() expects a valid error.message',
             'Valid Options Required::setConfig': 'setConfig() expects an object but got undefined',
-            'Valid Options Required::build': 'build() expects a valid string but got undefined',
-            'Valid Options Required::build(invalid)': 'build() expects: "all" (default) || "index" || "author"', 
+            'Valid Target Required::build': 'build() expects a valid string but got undefined',
+            'Valid Target Required::build(invalid)': 'build() expects: "all" (default) || "index" || "author"', 
             'TypeError: chalk[style.all] is not a function': 'error.style.color.all expects a valid "chalk" color || false',
             'TypeError: chalk[style.prefix] is not a function': 'error.style.color.prefix expects a valid "chalk" color || false',
             'TypeError: chalk[style.message] is not a function': 'error.style.color.message expects a valid "chalk" color || false'

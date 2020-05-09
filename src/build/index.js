@@ -2,7 +2,7 @@ const post = require('./post')
 const snippet = require('./snippet')
 
 module.exports = function(target='all') {
-    if(!target) return this.error('Valid Options Required::build')
+    if(!target) return this.error('Valid Target Required::build')
     switch(target) {
         case 'all':
             console.log('building all')
@@ -13,6 +13,6 @@ module.exports = function(target='all') {
         case 'author':
             console.log('building author')
             break
-        default: this.error('Valid Options Required::build(invalid)')
+        default: this.error('Valid Target Required::build(invalid)')
     }
 }
