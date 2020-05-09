@@ -1,4 +1,12 @@
+.circleci/
 .vscode/
 node_modules/
+posts/
+snippets/
 test/
+tmp/
 package-lock*
+CHANGELOG*
+CODE_OF_CONDUCT*
+CONTRIBUTING*
+*.html
