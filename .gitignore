@@ -1,6 +1,7 @@
 .vscode/
 tmp/
 posts/
+snippets/
 node_modules/
 index.html
 package-lock*
