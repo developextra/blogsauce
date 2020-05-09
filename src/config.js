@@ -9,6 +9,7 @@ module.exports.config = {
     version: require(path.resolve('package.json')).version,
     keywords: require(path.resolve('package.json')).keywords,
     author: {
+        page: true,
         name: require(path.resolve('package.json')).author,
         bio: '',
         links: [
@@ -22,16 +23,43 @@ module.exports.config = {
     snippet: {
         entry: require(path.resolve('package.json')).main+'/snippets',
         options: {
-            title: require(path.resolve('package.json')).title,
+            output: {
+                path: '.',
+                sanitize: true, // default sanitizer options
+                sanitizeHtml: null // override default sanitizer options in snippets
+            },
+            title: require(path.resolve('package.json')).name,
             description: require(path.resolve('package.json')).description,
             keywords: require(path.resolve('package.json')).keywords,
-            readtime: '5 min',
-            publish: true,
-            output: ''
+            readtime: null,
+            publish: false
         }
     },
     markedJs: {},
     sanitizeHtml: {},
+    font: { 
+        primary: '', 
+        secondary: ''
+    },
+    color: { 
+        primary: '', 
+        secondary: '' 
+    },
+    icon: {
+        active: true,
+        script: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js',
+        stylesheet: null
+    },
+    highlight: {
+        active: true,
+        script: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/highlight.min.js',
+        stylesheet: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/styles/tomorrow.min.css'
+    },
+    emoji: {
+        active: true,
+        script: '',
+        stylesheet: null
+    },
     error: {
         log: true,
         level: 0,
@@ -51,6 +79,8 @@ module.exports.config = {
         message: {
             'Valid Message Required::error': 'error() expects a valid error.message',
             'Valid Options Required::setConfig': 'setConfig() expects an object but got undefined',
+            'Valid Options Required::build': 'build() expects a valid string but got undefined',
+            'Valid Options Required::build(invalid)': 'build() expects: "all" (default) || "index" || "author"', 
             'TypeError: chalk[style.all] is not a function': 'error.style.color.all expects a valid "chalk" color || false',
             'TypeError: chalk[style.prefix] is not a function': 'error.style.color.prefix expects a valid "chalk" color || false',
             'TypeError: chalk[style.message] is not a function': 'error.style.color.message expects a valid "chalk" color || false'

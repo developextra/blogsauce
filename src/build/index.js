@@ -1,10 +1,18 @@
 const post = require('./post')
 const snippet = require('./snippet')
 
-module.exports = function() {
-    let posts = post(this.config, snippet(this.config.snippet), this)
-
-    posts.forEach(function(post) {
-        console.log(post)
-    })
+module.exports = function(target='all') {
+    if(!target) return this.error('Valid Options Required::build')
+    switch(target) {
+        case 'all':
+            console.log('building all')
+            break
+        case 'index':
+            console.log('building index')
+            break
+        case 'author':
+            console.log('building author')
+            break
+        default: this.error('Valid Options Required::build(invalid)')
+    }
 }

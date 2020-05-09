@@ -1,3 +1,3 @@
 const blog = require('../src')
 
-blog.publish()
+console.log(blog.build())
