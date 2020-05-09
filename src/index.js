@@ -1,9 +1,7 @@
 module.exports = {
-    config: require('./config'),
-    setConfig: require('./setConfig'),
-    init: require('./init'),
-    build: require('./build')
-    // run: require('./run'),
-    // start: require('./start'),
-    // publish: require('./publish')
+    config: require('./config').config,
+    setConfig: require('./config').set,
+    error: require('./error')
+    // init: require('./init'),
+    // build: require('./build')
 }
