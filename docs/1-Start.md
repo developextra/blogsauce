@@ -1,4 +1,4 @@
-Clone or download using npm. Either way, I'm going to end removing
+Clone or download using npm. Either way, I'm going to end up removing
 the `bin` script(s) from the repo. Reason being, the
 docs for this repo will eventually have a script you can plug into 
 your own bin, and you can `npm link` your own cli. I just think 
