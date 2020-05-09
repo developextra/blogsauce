@@ -13,7 +13,8 @@ module.exports.config = {
             title: require(path.resolve('package.json')).title,
             description: require(path.resolve('package.json')).description,
             keywords: require(path.resolve('package.json')).keywords,
-            readtime: '5 min'
+            readtime: '5 min',
+            publish: true
         }
     },
     error: {
