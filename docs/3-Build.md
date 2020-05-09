@@ -1,0 +1,5 @@
+- `build` takes 1 string argument.
+    - `all`
+    - `index`
+    - `author`
+    - `POST TITLE` | Filenames/Posts that exists in `config.entry`
