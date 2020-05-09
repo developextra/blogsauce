@@ -1,7 +1,8 @@
 const Style = require('../lib/Style')
 
 module.exports = function(message) {
-    if(message && this.config.error.log === true) {
+    if(!message) return undefined
+    if(this.config.error.log === true) {
         match = false
         err = message.toString()
 
