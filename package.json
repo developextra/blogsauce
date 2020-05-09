@@ -15,6 +15,7 @@
     "tool",
     "blog"
   ],
+  "author": "Michael Arakilian",
   "license": "MIT",
   "repository": {
     "type": "git",
