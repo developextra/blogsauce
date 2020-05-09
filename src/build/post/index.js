@@ -10,7 +10,7 @@ const fill = function(posts, formats, option) {
     })
 }
 
-module.exports = function(option, snippets) {
+module.exports = function(option, snippets, $) {
     tmpPosts = []
     let posts = []
 
@@ -22,13 +22,22 @@ module.exports = function(option, snippets) {
 
     tmpPosts.forEach(function(post) {
         postName = post.split(marker)[post.split(marker).length - 1]
-        snippets.forEach(function(snippet) {
-            snippetName = snippet.split(marker)[snippet.split(marker).length - 1]
-            if(path.parse(postName).name === path.parse(snippetName).name) {
-                resolved = { postPath: post, snippetPath: snippet }
-                posts.push(resolved)
+        if(snippets) {
+            if(snippets.length >= 1) {
+                console.log(snippets)
             }
-        })
+            else {
+                console.log($.error('no_snisppets'))
+            }
+            // snippets.forEach(function(snippet) {
+            //     snippetName = snippet.split(marker)[snippet.split(marker).length - 1]
+            //     if(path.parse(postName).name === path.parse(snippetName).name) {
+            //         resolved = { postPath: post, snippetPath: snippet }
+            //         posts.push(resolved)
+            //     }
+            // })
+        }
+
     })
 
     delete tmpPosts

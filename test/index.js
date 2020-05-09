@@ -1,7 +1,7 @@
 const blog = require('../src')
 
-blog.build()
+console.log(blog)
 
 // blog.init()
-// blog.config.snippets.setConfig({test: true})
+blog.setConfig()
 // console.log(blog.config.snippets)
