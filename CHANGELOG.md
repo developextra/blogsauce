@@ -1,3 +1,0 @@
-# Changelog
-
-*Currently in beta.*
