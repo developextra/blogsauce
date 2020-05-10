@@ -8,15 +8,15 @@ module.exports = function(_this, post) {
     let snippetmatch = false
 
     Walk(path.resolve(_this.config.entry), function(_path) {
-        if(_path.split(Marker)[_path.split(Marker).length - 1].startsWith(post)) postmatch = true
+        if(_path.split(Marker)[_path.split(Marker).length - 1].startsWith(post)) postmatch = _path
     })
 
     if(!postmatch) _this.error('Valid Target Required::build(invalid)')
     else {
         Walk(path.resolve(_this.config.snippet.entry), function(_path) {
-            if(_path.split(Marker)[_path.split(Marker).length - 1].startsWith(post)) snippetmatch = true
+            if(_path.split(Marker)[_path.split(Marker).length - 1].startsWith(post)) snippetmatch = _path
         })
         if(!snippetmatch) _this.error('Valid Target Required::build(invalid_snippet)')
-        else Main(_this, post)
+        else Main(_this, { key: post, post: postmatch, snippet: snippetmatch })
     }
 }
