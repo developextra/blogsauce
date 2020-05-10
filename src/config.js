@@ -25,8 +25,7 @@ module.exports.config = {
         options: {
             output: {
                 path: '.',
-                sanitize: true, // default sanitizer options
-                sanitizeHtml: null // override default sanitizer options in snippets
+                sanitize: true
             },
             title: require(path.resolve('package.json')).name,
             description: require(path.resolve('package.json')).description,
@@ -37,29 +36,29 @@ module.exports.config = {
     },
     markedJs: {},
     sanitizeHtml: {},
-    font: { 
-        primary: '', 
-        secondary: ''
-    },
-    color: { 
-        primary: '', 
-        secondary: '' 
-    },
-    icon: {
-        active: true,
-        script: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js',
-        stylesheet: null
-    },
-    highlight: {
-        active: true,
-        script: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/highlight.min.js',
-        stylesheet: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/styles/tomorrow.min.css'
-    },
-    emoji: {
-        active: true,
-        script: '',
-        stylesheet: null
-    },
+    // font: { 
+    //     primary: '', 
+    //     secondary: ''
+    // },
+    // color: { 
+    //     primary: '', 
+    //     secondary: '' 
+    // },
+    // icon: {
+    //     active: true,
+    //     script: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js',
+    //     stylesheet: null
+    // },
+    // highlight: {
+    //     active: true,
+    //     script: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/highlight.min.js',
+    //     stylesheet: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/styles/tomorrow.min.css'
+    // },
+    // emoji: {
+    //     active: true,
+    //     script: '',
+    //     stylesheet: null
+    // },
     error: {
         log: true,
         level: 0,

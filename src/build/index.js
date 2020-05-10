@@ -1,20 +1,6 @@
-const post = require('./post')
-const snippet = require('./snippet')
-
-function buildAll(_this) {
-    console.log('building all')
-    console.log(_this)
-}
-
-function buildIndex(_this) {
-    console.log('building index')
-    console.log(_this)
-}
-
-function buildAuthor(_this) {
-    console.log('building author')
-    console.log(_this)
-}
+function buildAll(_this) { return require('./all')(_this) }
+function buildIndex(_this) { return require('./index')(_this) }
+function buildAuthor(_this) { return require('./author')(_this) }
 
 module.exports = function(target='all') {
     if(!target) return this.error('Valid Target Required::build')
