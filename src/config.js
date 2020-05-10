@@ -37,31 +37,10 @@ module.exports.config = {
             publish: false
         }
     },
-    markedJs: {},
+    markedJs: {
+        headerIds: false
+    },
     sanitizeHtml: {},
-    // font: { 
-    //     primary: '', 
-    //     secondary: ''
-    // },
-    // color: { 
-    //     primary: '', 
-    //     secondary: '' 
-    // },
-    // icon: {
-    //     active: true,
-    //     script: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js',
-    //     stylesheet: null
-    // },
-    // highlight: {
-    //     active: true,
-    //     script: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/highlight.min.js',
-    //     stylesheet: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.2/styles/tomorrow.min.css'
-    // },
-    // emoji: {
-    //     active: true,
-    //     script: '',
-    //     stylesheet: null
-    // },
     error: {
         log: true,
         level: 0,
