@@ -3,7 +3,7 @@ const path = require('path')
 // config
 module.exports.config = {
     entry: require(path.resolve('package.json')).main,
-    format: { posts: 'markdown', snippets: 'yaml' },
+    lang: 'en',
     title: require(path.resolve('package.json')).name,
     description: require(path.resolve('package.json')).description,
     version: require(path.resolve('package.json')).version,
@@ -79,7 +79,8 @@ module.exports.config = {
             'Valid Message Required::error': 'error() expects a valid error.message',
             'Valid Options Required::setConfig': 'setConfig() expects an object but got undefined',
             'Valid Target Required::build': 'build() expects a valid string but got undefined',
-            'Valid Target Required::build(invalid)': 'build() expects: "all" (default) || "index" || "author"', 
+            'Valid Target Required::build(invalid)': 'build() expects: "all" (default) || [post] || "index" || "author"', 
+            'Valid Target Required::build(invalid_snippet)': 'build(post) expects a corresponding snippet', 
             'TypeError: chalk[style.all] is not a function': 'error.style.color.all expects a valid "chalk" color || false',
             'TypeError: chalk[style.prefix] is not a function': 'error.style.color.prefix expects a valid "chalk" color || false',
             'TypeError: chalk[style.message] is not a function': 'error.style.color.message expects a valid "chalk" color || false'

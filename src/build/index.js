@@ -1,6 +1,7 @@
 function buildAll(_this) { return require('./all')(_this) }
 function buildIndex(_this) { return require('./index')(_this) }
 function buildAuthor(_this) { return require('./author')(_this) }
+function buildPost(_this, post) { return require('./post')(_this, post) }
 
 module.exports = function(target='all') {
     if(!target) return this.error('Valid Target Required::build')
@@ -8,6 +9,6 @@ module.exports = function(target='all') {
         case 'all': buildAll(this); break
         case 'index': buildIndex(this); break
         case 'author': buildAuthor(this); break
-        default: this.error('Valid Target Required::build(invalid)')
+        default: buildPost(this, target)
     }
 }

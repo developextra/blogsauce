@@ -1,3 +1,10 @@
 const blog = require('../src')
 
-blog.build()
+blog.setConfig({
+    entry: 'posts',
+    snippet: {
+        entry: 'snippets'
+    }
+})
+
+console.log(blog.build('Other'))
