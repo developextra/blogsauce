@@ -1,5 +1,5 @@
 - `build` takes 1 string argument.
-    - `all` | default
-    - `index` | homepage
-    - `author` | author component
-    - `POST TITLE` | Filenames/Posts that exists in `config.entry`
+    - `all` | default - build all pages
+    - `index` | build the homepage (index.html)
+    - `author` | build the author component 
+    - `[POST]` | A single filename (without extension) that exists in `config.entry` path
