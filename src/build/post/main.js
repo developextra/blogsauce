@@ -19,7 +19,6 @@ module.exports = function(_this, post) {
     if(!snippetPass) _this.error('Valid Snippet Extension Required')
     else {
         let raw = {
-            _: _this,
             post: null,
             snippet: null
         }
