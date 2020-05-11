@@ -20,7 +20,7 @@ module.exports.config = {
     prefer: {
         post: '.md',
         snippet: '.yml',
-        boilerplate: false
+        boilerplate: true
     },
     author: {
         component: true,
@@ -78,6 +78,12 @@ module.exports.config = {
             'Valid Target Required::build': 'build() expects a valid string but got undefined',
             'Valid Target Required::build(invalid)': 'build() expects: "all" (default) || [post] || "index" || "author"', 
             'Valid Target Required::build(invalid_snippet)': 'build(post) expects a corresponding snippet', 
+            'Valid Key Required::new': 'new() expects a string but got undefined', 
+            'Valid Key Required::new(exists)': 'new(post) - [post, snippet] already exist',
+            'Valid Key Required::new(exists_post)': 'new(post) - [post] already exist',
+            'Valid Key Required::new(exists_snippet)': 'new(post) - [snippet] already exist',
+            'Valid Post Type Required::new()': 'config.prefer.post should be either ".html" || ".md" || ".markdown"',
+            'Valid Snippet Type Required::new()': 'config.prefer.snippet should be either ".js" || ".json" || ".yml" || ".yaml"',
             'Valid Post Extension Required': 'post file(s) need to be HTML or Markdown format',
             'Valid Snippet Extension Required': 'snippet file(s) need to be JavaScript, YAML, or JSON format',
             'TypeError: chalk[style.all] is not a function': 'error.style.color.all expects a valid "chalk" color || false',
