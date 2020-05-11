@@ -2,11 +2,12 @@ const fs = require('fs')
 const path = require('path')
 const Walk = require('../../lib/Walk')
 const Marker = require('../../lib/Marker')
+const YAML = require('js-yaml')
+const modify = require('./modify')
 
 module.exports = function(key) {
     if(!key) return this.error('Valid Key Required::new')
     else {
-
         let postExists = false
         let snippetExists = false
 
@@ -23,28 +24,24 @@ module.exports = function(key) {
             if(this.config.prefer.boilerplate) {
                 switch(this.config.prefer.post) {
                     case '.md':
-                    case '.markdown': postData = '# Hello World'; break
-                    case '.html':  postData = '<h1>Hello World</h1>'; break
+                    case '.markdown': postData = `# ${key}`; break
+                    case '.html':  postData = `<h1>${key}</h1>`; break
                     default: this.error('Valid Post Type Required::new()')
                 }
                 switch(this.config.prefer.snippet) {
-                    case '.js': 
-                        snippetData = 'js'
-                        break
-                    case '.json': 
-                        snippetData = 'json'
-                        break
                     case '.yml': 
-                    case '.yaml': 
-                        snippetData = 'yaml'
-                        break
+                    case '.yaml': snippetData = YAML.safeDump(modify(this, key)); break
+                    case '.json': snippetData = JSON.stringify(modify(this, key), null, 2); break
+                    case '.js': snippetData = ['module.exports = ', modify(this, key)]; break
                     default: this.error('Valid Snippet Type Required::new()')
                 }
             }
 
-            console.log(postData)
-            console.log(snippetData)
+            if(!fs.existsSync(path.resolve(this.config.entry))) fs.mkdirSync(path.resolve(this.config.entry))
+            if(!fs.existsSync(path.resolve(this.config.snippet.entry))) fs.mkdirSync(path.resolve(this.config.snippet.entry))
+                
+            fs.writeFileSync(path.resolve(this.config.entry, key+this.config.prefer.post), postData)
+            fs.writeFileSync(path.resolve(this.config.snippet.entry, key+this.config.prefer.snippet), snippetData)
         }
-
     }
 }
