@@ -1,4 +1,10 @@
 const path = require('path')
+const joi = require('@hapi/joi')
+
+// snippet schema
+const schema = joi.object({
+    publish: joi.boolean().required()
+})
 
 // config
 module.exports.config = {
@@ -14,7 +20,7 @@ module.exports.config = {
     prefer: {
         post: '.md',
         snippet: '.yml',
-        boilerplate: true
+        boilerplate: false
     },
     author: {
         component: true,
@@ -35,18 +41,16 @@ module.exports.config = {
         config: {
             output: {
                 path: '.',
-                sanitize: true
+                sanitize: true,
+                sanitizeHtml: null
             },
             title: require(path.resolve('package.json')).name,
             description: require(path.resolve('package.json')).description,
             keywords: require(path.resolve('package.json')).keywords,
-            readtime: undefined,
-            styles: [],
-            scripts: [],
-            prescripts: [],
+            readtime: null,
             publish: false
         },
-        configSchema: require('./schema')
+        configSchema: schema
     },
     markedJs: {
         headerIds: false
