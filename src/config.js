@@ -20,10 +20,15 @@ module.exports.config = {
     prefer: {
         post: '.md',
         snippet: '.yml',
-        boilerplate: true
+        boilerplate: true,
+        smart: true,
+        date: {
+            format: ',',
+            months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        }
     },
     author: {
-        component: true,
+        view: 'component',
         name: require(path.resolve('package.json')).author,
         bio: '',
         links: [
@@ -39,16 +44,18 @@ module.exports.config = {
     snippet: {
         entry: require(path.resolve('package.json')).main+'/snippets',
         config: {
-            output: {
-                path: '.',
-                sanitize: true,
-                sanitizeHtml: null
-            },
             title: require(path.resolve('package.json')).name,
             description: require(path.resolve('package.json')).description,
             keywords: require(path.resolve('package.json')).keywords,
             readtime: null,
-            publish: false
+            publish: false,
+            date: null,
+            seo: true,
+            preview: true,
+            output: {
+                path: '.',
+                sanitize: true
+            }
         },
         configSchema: schema
     },
@@ -86,6 +93,7 @@ module.exports.config = {
             'Valid Snippet Type Required::new()': 'config.prefer.snippet should be either ".js" || ".json" || ".yml" || ".yaml"',
             'Valid Post Extension Required': 'post file(s) need to be HTML or Markdown format',
             'Valid Snippet Extension Required': 'snippet file(s) need to be JavaScript, YAML, or JSON format',
+            'Valid Date Format Required': 'config.prefer.date.format should be either "," || "/"',
             'TypeError: chalk[style.all] is not a function': 'error.style.color.all expects a valid "chalk" color || false',
             'TypeError: chalk[style.prefix] is not a function': 'error.style.color.prefix expects a valid "chalk" color || false',
             'TypeError: chalk[style.message] is not a function': 'error.style.color.message expects a valid "chalk" color || false'
