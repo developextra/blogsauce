@@ -11,12 +11,19 @@ module.exports.config = {
     styles: [],
     scripts: [],
     prescripts: [],
+    prefer: {
+        post: '.md',
+        snippet: '.yml',
+        boilerplate: true
+    },
     author: {
-        page: true,
+        component: true,
         name: require(path.resolve('package.json')).author,
         bio: '',
         links: [
-            { email: true, link: '' },
+            { email: true, link: '', text: '' },
+            { phone: true, link: '', text: '' },
+            { website: true, link: '', text: '' },
             { link: '', icon: '' },
             { link: '', icon: '' },
             { link: '', icon: '' },
@@ -25,7 +32,7 @@ module.exports.config = {
     },
     snippet: {
         entry: require(path.resolve('package.json')).main+'/snippets',
-        options: {
+        config: {
             output: {
                 path: '.',
                 sanitize: true
@@ -33,9 +40,13 @@ module.exports.config = {
             title: require(path.resolve('package.json')).name,
             description: require(path.resolve('package.json')).description,
             keywords: require(path.resolve('package.json')).keywords,
-            readtime: null,
+            readtime: undefined,
+            styles: [],
+            scripts: [],
+            prescripts: [],
             publish: false
-        }
+        },
+        configSchema: require('./schema')
     },
     markedJs: {
         headerIds: false

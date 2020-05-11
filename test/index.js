@@ -7,4 +7,4 @@ blog.setConfig({
     }
 })
 
-console.log(blog.build('Other'))
+console.log(blog.build('Hello World'))
