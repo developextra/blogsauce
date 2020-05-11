@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/developextra/blogsauce#readme",
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "chalk": "^4.0.0",
     "js-beautify": "^1.11.0",
     "js-yaml": "^3.13.1",
