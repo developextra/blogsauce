@@ -3,13 +3,14 @@ const blog = require('../src')
 blog.setConfig({
     entry: 'posts',
     prefer: {
-        post: '.html',
+        post: '.markdown',
         snippet: '.json',
-        boilerplate: true
+        boilerplate: true,
+        smart: false
     },
     snippet: {
         entry: 'snippets'
     }
 })
 
-console.log(blog.new('Tess'))
+blog.new('Tesdsdst')
