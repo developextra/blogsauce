@@ -1,3 +1,13 @@
+- `prefer`
+    - `post` - new post boilerplate format (`.html`|`.md`|`.markdown`)
+    - `snippet` - new snippet boilerplate format (`.js`|`.json`|`.yml`|`.yaml`)
+    - `boilerplate` - if true it will populate new posts with `Hello World` and new snippets with `config.snippet.config`
+    - `smart` - if true it will fill in the `date` and update the `title` in the new snippet file 
+
+- `markedJs` - options passed to [marked.js](https://github.com/markedjs/marked) in the case of markdown posts
+
+- `sanitizeHtml` - options passed to [sanitize-html](https://npmjs.com/package/sanitize-html) in the case of a snippet file having `output: { sanitize: true }`
+
 - `error`
     - `log` | Only logs error messages when `true`
     - `prefix` | String that prepends the error message
