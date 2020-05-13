@@ -5,7 +5,7 @@
 - `prefer` | object - configurations for blogsauce.new()
     - `post` || - new post boilerplate format (`.html`|`.md`|`.markdown`)
     - `snippet` || - new snippet boilerplate format (`.js`|`.json`|`.yml`|`.yaml`)
-    - `boilerplate` || - if true it will populate new posts with `Hello World` and new snippets with `config.snippet.config`
+    - `boilerplate` || - if true it will populate new posts with `Hello World` and new snippets with `blogsauce.config.snippet.config`
     - `smart` || - if true it will fill in the `date` and update the `title` in the new snippet file 
     - `date` || object 
         - `format` ||| string - If "," formats dates like so "m d, y". If "/" formats dates like so "m/d/y". Else throws error
