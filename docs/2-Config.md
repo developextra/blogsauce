@@ -32,11 +32,4 @@ You'll also be able to directly overwrite these options for a specific post, in 
             - `prefix` |||| boolean - If true, bold the error prefix.
             - `message` |||| boolean - If true, bold the error message.
     - `message` || object - An unordered list of program error messages. The object keys are used
-        as an "index". I wouldn't recommend modifying current message keys. Feel
-        free to change the value though that's totally expected. What I do
-        recommend is adding new keys if you want to handle new error cases.
-        The only reason I say that is because the 
-        program is expecting the error messages that exist in the default config. 
-        So if you change the error key you would have to change all the cases
-        where it's used. That means modifying the source code. If your going to 
-        do that might as well fork it, and help a brother out :heart:.
+        as an "index".
