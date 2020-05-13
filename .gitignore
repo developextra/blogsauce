@@ -3,6 +3,5 @@ tmp/
 posts/
 snippets/
 node_modules/
-index.html
 package-lock*
-todo.txt
+*.html
