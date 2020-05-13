@@ -23,7 +23,7 @@ You'll also be able to directly overwrite these options for a specific post, in 
     Give it `anything` besides the number 0 to allow the program to continue with errors
     - `style` ||  object - Applies styling to error messages using [chalk](https://github.com/chalk/chalk)
         - `color` ||| object - Apply color to the error messages. Valid Colors: 
-        [black](#), [red](#), [green](#), [yellow](#), [blue](#), [magenta](#), [cyan](#), [white](#), [gray](#)
+        **black**, **red**, **green**, **yellow**, **blue**, **magenta**, **cyan**, **white**, **gray**
             - `all` |||| string - If true color the entire error. If false the following options allow you to color the error by section.
             - `prefix` |||| string - If true, color the error prefix.
             - `message` |||| string - If true, color the error message.
