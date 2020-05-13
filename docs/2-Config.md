@@ -6,7 +6,8 @@
 
 - `markedJs` - options passed to [marked.js](https://github.com/markedjs/marked) in the case of markdown posts
 
-- `sanitizeHtml` - options passed to [sanitize-html](https://npmjs.com/package/sanitize-html) in the case of a snippet file having `output: { sanitize: true }`
+- `sanitizeHtml` - options passed to [sanitize-html](https://npmjs.com/package/sanitize-html) in the case of a snippet file having `output: { sanitize: true }`.
+You'll also be able to directly overwrite these options in the case of a snippet file having `output: { sanitizeHtml: {} }`
 
 - `error`
     - `log` | Only logs error messages when `true`
