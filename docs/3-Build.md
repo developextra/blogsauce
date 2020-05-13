@@ -2,4 +2,4 @@
     - `all` | default - build all pages
     - `index` | build the homepage (index.html)
     - `author` | build the author component 
-    - `[POST]` | A single filename (without extension) that exists in `config.entry` path
+    - `[POST]` | A single filename (without extension) that exists in `blogsauce.config.entry` path
