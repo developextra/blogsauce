@@ -3,7 +3,7 @@ const path = require('path')
 const Walk = require('../../lib/Walk')
 const Marker = require('../../lib/Marker')
 const YAML = require('js-yaml')
-const modify = require('./modify')
+const smart = require('./smart')
 
 module.exports = function(key) {
     if(!key) return this.error('Valid Key Required::new')
@@ -30,9 +30,9 @@ module.exports = function(key) {
                 }
                 switch(this.config.prefer.snippet) {
                     case '.yml': 
-                    case '.yaml': snippetData = YAML.safeDump(modify(this, key)); break
-                    case '.json': snippetData = JSON.stringify(modify(this, key), null, 2); break
-                    case '.js': snippetData = ['module.exports = ', modify(this, key)]; break
+                    case '.yaml': snippetData = YAML.safeDump(smart(this, key)); break
+                    case '.json': snippetData = JSON.stringify(smart(this, key), null, 2); break
+                    case '.js': snippetData = ['module.exports = ', smart(this, key)]; break
                     default: this.error('Valid Snippet Type Required::new()')
                 }
             }
